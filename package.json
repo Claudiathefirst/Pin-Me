@@ -1,0 +1,11 @@
+{
+  "name": "pin-me",
+  "version": "1.0.0",
+  "description": "pin app with infinite scroll",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Claudia Saimbert",
+  "license": "ISC"
+}
