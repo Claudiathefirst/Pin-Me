@@ -1,10 +1,13 @@
+const isDev = process.env.Node_ENV === 'development';
 module.exports = {
-  entry: ['./client/index.js'],
+  mode: isDev ? development : production,
+  entry: ['@babel/polyfill', './client/index.js'],
   output: {
     path: __dirname,
     filename: './public/bundle.js',
   },
   devtool: 'source-map',
+  WatchOptions: { ignored: /node_modules/ },
   module: {
     rules: [
       {
@@ -13,6 +16,12 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-react'],
+        },
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: 'url-loader',
         },
       },
     ],
