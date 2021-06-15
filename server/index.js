@@ -1,9 +1,9 @@
 //entry point server
+const path = require('path');
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 3000;
 const port = process.env.PORT || 3000;
 
 // logging middleware
@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, '../public/index.html')));
 // api routes
 app.use('/api', require('./api'));
 //send index html
-app.get('*', (req, res) => {
+app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public/index.html'));
 });
 
@@ -31,3 +31,5 @@ app.use((err, req, res, next) => {
 app.listen(port, () => {
   console.log(`Harmonizing on port ${port}`);
 });
+
+module.exports = app;
