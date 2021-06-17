@@ -23,7 +23,16 @@ const LogoWrapper = styled.div`
 
   }
 `;
-const HomePageButton = styled.button``;
+const HomePageButton = styled.button`
+	display: flex;
+	height: 48px;
+	min-width: 123px
+	align-items: center;
+	justify-content: center;
+	border-radius: 24px;
+	cursor: pointer;
+	background-color: rgb(17,17,17)
+`;
 // const FollowingButton = styled.button``;
 // const SearchWrapper = styled.div``;
 // const SearchBarWrapper = styled.div``;
