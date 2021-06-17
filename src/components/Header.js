@@ -20,7 +20,6 @@ const LogoWrapper = styled.div`
 	  color: #c60023
     font-size: 32px;
 	cursor: pointer;
-
   }
 `;
 const HomePageButton = styled.button`
