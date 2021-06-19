@@ -10,12 +10,12 @@ import TextsmsIcon from '@material-ui/icons/Textsms';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 function Header(props) {
-  //hook for search
   const [input, setInput] = useState('');
   const onSearchSubmit = (event) => {
     event.preventDefault();
-    console.log(input);
+    props.onSubmit(input);
   };
+
   return (
     <Wrapper>
       <LogoWrapper>
