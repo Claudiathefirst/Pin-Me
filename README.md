@@ -1,14 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Implement Infinite Scroll Feature
 
-## Available Scripts
+Given a static dataset (JSON) of
+Pinterest Pins, design and implement a page that shows all the pins and allows infinite scrolling, reusing
+the Pins as needed. The implementation should be done in a modular way so that the rendering of Pins
+could be easily reused in other pages and this page could be given other widgets to arrange on the page
+and support infinite scrolling.
 
-In the project directory, you can run:
+## How to setup and run this App
 
-### `npm start`
+To run this app, download the project on your local computer and run the following script.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+$ cd pin-me
+$ npm install
+```
 
-The page will reload if you make edits.\
+Start server and access http://localhost:3000/
+
+```
+$ npm run start
+```
+
+## Feature
+
+Infinite Scroll and Search by Image Title
+
+The page will reload if you make edits.
+
 You will also see any lint errors in the console.
 or more information.
