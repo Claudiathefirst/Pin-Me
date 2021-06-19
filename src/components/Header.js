@@ -31,7 +31,7 @@ function Header(props) {
       </FollowingButton>
       <SearchWrapper>
         <SearchBarWrapper>
-          <IconButton>
+          <IconButton type='submit' onClick={onSearchSubmit}>
             <SearchIcon />
           </IconButton>
           <form>
@@ -39,7 +39,6 @@ function Header(props) {
               type='text'
               onChange={(event) => setInput(event.target.value)}
             />
-            <button type='submit' onClick={onSearchSubmit}></button>
           </form>
         </SearchBarWrapper>
       </SearchWrapper>
