@@ -6,12 +6,30 @@ import data from './nyc_ttp_pins.json';
 
 function App() {
   const [jsonData] = useState(data);
+  const getImage = (input) => {
+    const query = input.toLowerCase();
+    const obj = jsonData
+      .map((el) => {
+        const titles = el.title.toLowerCase();
+        if (titles.includes(query)) {
+          return el.images.orig.url;
+        } else {
+          return [];
+        }
+      })
+      .filter((el) => typeof el === 'string');
 
-  const [{ pin_join, images }] = jsonData;
+    return obj;
+
+    // map returns new arr
+  };
+  const onSearchSubmit = (term) => getImage(term);
+  console.log(onSearchSubmit('kitten'));
+
   return (
     <div className='app'>
-      <Header pin_join={pin_join} />
-      <Mainboard image={images} />
+      <Header onSubmit={onSearchSubmit} />
+      <Mainboard jsonData={jsonData} />
     </div>
   );
 }
