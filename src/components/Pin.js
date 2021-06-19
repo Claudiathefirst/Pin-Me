@@ -3,14 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 function Pin(props) {
-  const {
-    orig: { url },
-  } = props;
-  console.log(url);
+  let { url } = props;
+  console.log(props);
+
   return (
     <Wrapper>
       <Container>
-        <img src={url} />
+        <img src={url} alt='pin' />
       </Container>
     </Wrapper>
   );
