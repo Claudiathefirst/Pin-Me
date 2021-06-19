@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Pin from './Pin.js';
-
+import './Mainboard.css';
 function Mainboard(props) {
   console.log(props);
   const { pins } = props;
@@ -9,7 +9,7 @@ function Mainboard(props) {
   return (
     <div>
       <Wrapper>
-        <Container>
+        <Container className='mainboard__container'>
           {pins.map((pins, idx) => {
             return <Pin key={idx} url={pins} />;
           })}
@@ -32,7 +32,8 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 const Container = styled.div`
-  display: flex;
   background-color: white;
-  width: 80%;
+  column-gap: 5px;
+  margin: 0 auto;
+  height: 100%;
 `;

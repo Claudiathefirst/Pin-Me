@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 function Pin(props) {
   let { url } = props;
-  console.log(props);
 
   return (
     <Wrapper>
